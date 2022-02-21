@@ -34,6 +34,20 @@ namespace WindowsFormsApp8
         /// Требуемый метод для поддержки конструктора — не изменяйте 
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
+        /// 
+
+        class C_Duck 
+        {
+            
+        
+        
+        }
+
+
+
+
+
+
         private void InitializeComponent()
         {
             //Написать игру «duck killer». На карте появляются утки, 
@@ -44,7 +58,7 @@ namespace WindowsFormsApp8
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "duck";
+            this.Text = "duten pula kuzda meti";
 
             this.BackColor = Color.AntiqueWhite;
             this.Size = new System.Drawing.Size(700, 700);
@@ -85,11 +99,10 @@ namespace WindowsFormsApp8
 
             Point pointX = new Point(xMous);
             Point pointY = new Point(yMous);
-            List<Point> tocka = new List<Point>(pointX, pointY);
+            List<Point> tocka = new List<Point>();
 
             label.Size = new Size(4, 4);
             label.BackColor = Color.Black;
-
             this.Controls.Add(label);
 
             int x = 0;
@@ -97,7 +110,7 @@ namespace WindowsFormsApp8
             {
                 x++;
                 Label lab = new Label();
-                lab.Location = new Point(pointM.X, pointM.Y);
+                // lab.Location = new Point(pointX, pointY);
             }
         }
 
@@ -127,6 +140,7 @@ namespace WindowsFormsApp8
             e.Graphics.DrawEllipse(Pens.Red,
                 mouse_location.X, mouse_location.Y, 30, 30);
             Thread.Sleep(35);
+
         }
         #endregion
     }
